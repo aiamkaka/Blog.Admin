@@ -1,6 +1,7 @@
 module.exports = {
   // 基本路径
   publicPath: '/',
+  // publicPath: '/admin/',//IIS中创建子站点时设置这个属性，对应子站点名称。
   // 输出文件目录
   outputDir: "dist",
   // eslint-loader 是否在保存的时候检查

@@ -7,6 +7,7 @@ import Vue from 'vue';
 import applicationUserManager from "../Auth/applicationusermanager";
 
 let base = '';
+// let base= 'http://localhost:9291';
 // 如果是IIS部署，用这个，因为 IIS 只能是 CORS 跨域，不能代理
 // let base = process.env.NODE_ENV=="production"? 'http://localhost:8081':'';
 
@@ -434,3 +435,13 @@ export const getDepartmentTree = params => {
     return axios.get(`${base}/api/department/getDepartmentTree`, {params: params});
 };
 
+//Demo管理
+export const getDemos = params => {
+    return axios.get(`${base}/api/DemoApi/get`, {params: params});
+};
+export const removeDemo = params => {
+    return axios.get(`${base}/api/DemoApi/delete`, {params: params});
+};
+export const addDemo = params => {
+    return axios.post(`${base}/api/DemoApi/post`, params);
+};
